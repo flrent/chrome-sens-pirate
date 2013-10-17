@@ -1,4 +1,22 @@
-chrome-sens-pirate
-==================
+# Chrome SensPirate
 
-A Google Chrome extension adding buttons to SensCritique.com to quick search on torrent sites
+This is a chrome extension adding buttons to SensCritique.com movies and tv shows to automatically search on torrent websites the related media.
+
+#### DISCLAIMER :
+This is a proof of concept only and I strongly discourage you to use it for pirating files you don't own copyright.
+
+## How to install this extension :
+- Download the `SensPirate.crx` file
+- Go to `chrome://extensions` in your Google Chrome
+- Drag the file there
+
+## Create your own
+To create your own build, clone the repository, install the Yeoman Google Chrome Extension generator and run `grunt`.
+Then, enable `developer mode` in Google Chrome Extensions page and package it yourself.
+
+## Thanks
+This tool has been created with Yeoman, Yeoman Chrome Extension generator, GruntJS, Bower and other JavaScript libraries.
+
+## Licence
+Created by [Florent Lamoureux](http://twitter.com/flrent) 
+Licensed under MIT license.
