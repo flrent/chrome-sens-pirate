@@ -8,7 +8,7 @@ This is a chrome extension adding buttons to SensCritique.com movies and tv show
 This is a proof of concept only and I strongly discourage you to use it for pirating files you don't own copyright.
 
 ## How to install this extension :
-- Download the `SensPirate.crx` file
+- Download the `SensPirate.crx` file [from the repo](https://github.com/flrent/chrome-sens-pirate/raw/master/SensPirate.crx)
 - Go to `chrome://extensions` in your Google Chrome
 - Drag the file there
 
