@@ -21,7 +21,7 @@ function SensPirate() {
 		    href: url,
 		    class: 'btn '+cls,
 		    title: text,
-		    target:'new',
+		    target:'_new',
 		    text: text
 		});
 		return btn;

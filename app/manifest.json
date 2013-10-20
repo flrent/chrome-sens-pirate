@@ -17,7 +17,9 @@
         {
             "matches": [
                 "http://*.senscritique.com/*",
-                "https://*.senscritique.com/*"
+                "https://*.senscritique.com/*",
+                "http://*.allocine.fr/*",
+                "https://*.allocine.fr/*"
             ],
             "css": [
                 "styles/main.css"
