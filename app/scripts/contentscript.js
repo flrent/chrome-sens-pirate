@@ -3,15 +3,16 @@
 'use strict';
 
 function SensPirate() {
-	this.mediaCls = 'div.main .prvie-title';
-	this.mediaOriginalCls = 'div.main .prvie-original-title';
+	this.mediaCls = '.pco-cover-content';
+	this.mediaOriginalCls = 'h1.pco-cover-originaltitle';
+	this.mediaTitleCls = '.d-cover-title h1';
 	this.tpbSearchUrl = 'http://thepiratebay.sx/search/{media}/0/99/100,200';
 	this.t4SearchUrl = 'http://www.t411.me/torrents/search/?search={media}';
 
 	this.getMediaTitle = function() {
 		var title = $(this.mediaOriginalCls).text();
-		if(!$(this.mediaOriginalCls).length) {
-			title = $(this.mediaCls).text();
+		if(title==='') {
+			title = $(this.mediaTitleCls).text();
 		}
 		return removeDiacritics(title);
 	};
@@ -19,9 +20,9 @@ function SensPirate() {
 	this.createDownloadButton = function(cls, text, url) {
 		var btn = $('<a/>', {
 		    href: url,
-		    class: 'btn '+cls,
+		    class: 'pco-cover-button '+cls,
 		    title: text,
-		    target:'_new',
+		    target:'_blank',
 		    text: text
 		});
 		return btn;
@@ -31,8 +32,8 @@ function SensPirate() {
 		var tpbBtn = this.createDownloadButton('tpb','Chercher sur ThePirateBay',this.tpbSearchUrl.replace('{media}',this.getMediaTitle())),
 			t4Btn = this.createDownloadButton('t4','Chercher sur T411',this.t4SearchUrl.replace('{media}',this.getMediaTitle()));
 
-		$(this.mediaCls).after(tpbBtn);
-		$(this.mediaCls).after(t4Btn);
+		$(this.mediaCls).append(tpbBtn);
+		$(this.mediaCls).append(t4Btn);
 	};
 
 	this.init = function() {
