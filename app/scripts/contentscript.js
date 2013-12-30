@@ -6,7 +6,7 @@ function SensPirate() {
 	this.mediaCls = '.pco-cover-content';
 	this.mediaOriginalCls = 'h1.pco-cover-originaltitle';
 	this.mediaTitleCls = '.d-cover-title h1';
-	this.tpbSearchUrl = 'http://thepiratebay.sx/search/{media}/0/99/100,200';
+	this.tpbSearchUrl = 'http://thepiratebay.se/search/{media}/0/99/100,200';
 	this.t4SearchUrl = 'http://www.t411.me/torrents/search/?search={media}';
 
 	this.getMediaTitle = function() {
