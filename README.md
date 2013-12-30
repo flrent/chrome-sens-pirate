@@ -17,6 +17,7 @@ To create your own build, clone the repository, install the Yeoman Google Chrome
 Then, enable `developer mode` in Google Chrome Extensions page and package it yourself.
 
 ## Version history
+- 1.6 Updated pirate bay url (30 December 2013)
 - 1.5 Updated with compatibility with the new SensCritique.com (30 October 2013)
 - 1.4 Fixed open in a new tab target (October 2013)
 - 1.3 First Release (October 2013)
