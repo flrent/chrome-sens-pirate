@@ -3,9 +3,9 @@
 'use strict';
 
 function SensPirate() {
-	this.mediaCls = '.pco-cover-content';
-	this.mediaOriginalCls = 'h1.pco-cover-originaltitle';
-	this.mediaTitleCls = '.d-cover-title h1';
+	this.mediaCls = 'ul.d-menu-list';
+	this.mediaOriginalCls = '.pvi-product-originaltitle';
+	this.mediaTitleCls = 'h1.pvi-product-title';
 	this.tpbSearchUrl = 'http://thepiratebay.se/search/{media}/0/99/100,200';
 	this.t4SearchUrl = 'http://www.t411.me/torrents/search/?search={media}';
 
@@ -18,22 +18,28 @@ function SensPirate() {
 	};
 
 	this.createDownloadButton = function(cls, text, url) {
-		var btn = $('<a/>', {
-		    href: url,
-		    class: 'pco-cover-button '+cls,
+		var btn = $('<button/>', {
+
+		    class: 'pco-social-action '+cls,
 		    title: text,
 		    target:'_blank',
 		    text: text
+		});
+		btn.on("click", function() {
+			window.open(url);
 		});
 		return btn;
 	};
 
 	this.appendDownloadButtons = function() {
-		var tpbBtn = this.createDownloadButton('tpb','Chercher sur ThePirateBay',this.tpbSearchUrl.replace('{media}',this.getMediaTitle())),
-			t4Btn = this.createDownloadButton('t4','Chercher sur T411',this.t4SearchUrl.replace('{media}',this.getMediaTitle()));
+		var tpbBtn = this.createDownloadButton('tpb','ThePirateBay',this.tpbSearchUrl.replace('{media}',this.getMediaTitle())),
+			t4Btn = this.createDownloadButton('t4','T411',this.t4SearchUrl.replace('{media}',this.getMediaTitle()));
 
-		$(this.mediaCls).append(tpbBtn);
-		$(this.mediaCls).append(t4Btn);
+		var litpb = $('<li class="pco-menu-social" />');
+		$(this.mediaCls).append(litpb.html(tpbBtn));
+		
+		var lit4B = $('<li class="pco-menu-social" />');
+		$(this.mediaCls).append(lit4B.html(t4Btn));
 	};
 
 	this.init = function() {
