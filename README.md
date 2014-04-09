@@ -2,7 +2,7 @@
 
 This is a chrome extension adding buttons to SensCritique.com movies and tv shows to automatically search on torrent websites the related media.
 
-![SensPirate Screenshot](http://i.imgur.com/XqvIFDk.png)
+![SensPirate Screenshot](http://i.imgur.com/eVXMzIZ.png)
 
 #### DISCLAIMER :
 This is a proof of concept only and I strongly discourage you to use it for pirating files you don't own copyright.
